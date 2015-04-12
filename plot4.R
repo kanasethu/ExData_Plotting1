@@ -10,7 +10,7 @@ date_and_time <- paste(power_ss$Date, power_ss$Time)
 power_ss$DateTime <- strptime(date_and_time, "%Y-%m-%d %T")
 
 # Plot mulptiple graphs in a screen
-par(mfrow = c(2,2), mar=c(4,2,2,0), oma=c(0,0,0,0))
+par(mfrow = c(2,2), mar=c(4,2,2,0), oma=c(0,4,0,4))
 with(power_ss, {
      plot(DateTime, Global_active_power, type="l", xlab="", ylab="Global Active Power")
      plot(DateTime, Voltage, type="l", xlab="datetime", ylab="Voltage")
