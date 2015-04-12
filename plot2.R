@@ -9,10 +9,10 @@ power_ss <- subset(power, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
 date_and_time <- paste(power_ss$Date, power_ss$Time)
 power_ss$DateTime <- strptime(date_and_time, "%Y-%m-%d %T")
 
-# Create a histogram of Global Active Power
+# Plot Global active power as a function of time
 plot(power_ss$DateTime, power_ss$Global_active_power, type="l",
      xlab="", ylab="Global Active Power (kilowatts)") 
 
-## Saving to file
+# Save graph
 dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()

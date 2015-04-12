@@ -23,8 +23,6 @@ with(power_ss, {
      plot(DateTime, Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 })
 
-# Insert legend
-
-## Saving to file
+# Save graph
 dev.copy(png, file="plot4.png", height=480, width=480)
 dev.off()
